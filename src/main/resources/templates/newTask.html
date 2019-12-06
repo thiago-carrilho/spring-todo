@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form method="POST" th:action="@{/task}" th:object="${task}">
+		<label for="title">Title:</label>
+		<input type="text" th:field="*{title}">
+		<br>
+		<label for="text">Text:</label>
+		<input type="text" th:field="*{text}">
+		<br>
+		<input type="submit" value="Create task"/>
+	</form>
+</body>
+</html>
